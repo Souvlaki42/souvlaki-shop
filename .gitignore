@@ -25,3 +25,5 @@ dist-ssr
 
 # My own
 .env
+main.py
+old_items.json

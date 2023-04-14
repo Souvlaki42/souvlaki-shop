@@ -52,7 +52,6 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
       body: JSON.stringify({
         cartItems: cartItems,
         storeItems: storeItems,
-        totalAmount: totalAmount,
       }),
     })
       .then((res) => {
@@ -63,6 +62,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         return id;
       })
       .catch((e) => console.error(e.error));
+    
   }
 
   function onPaypalApprove(data: OnApproveData, actions: OnApproveActions) {

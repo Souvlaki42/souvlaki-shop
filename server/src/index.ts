@@ -77,11 +77,28 @@ app.post("/checkout-with-stripe", async (req: Request, res: Response) => {
   }
 });
 
+function removeMoreThanTwoDecimals(value: number) {
+  return Math.trunc(value * 100) / 100;
+}
+
 app.post("/checkout-with-paypal", async (req: Request, res: Response) => {
   try {
     const cartItems = req.body.cartItems;
     const storeItems = req.body.storeItems;
-    const totalAmount = req.body.totalAmount.toFixed(2);
+
+    const totalAmount = cartItems.reduce(
+      (total: string, cartItem: CartItem) => {
+        const item = storeItems.find((i: StoreItem) => i.id === cartItem.id);
+        return (
+          total +
+          removeMoreThanTwoDecimals(
+            getDiscountedPrice(item?.price || 0, item?.discount || 0) *
+              cartItem.quantity
+          )
+        );
+      },
+      0
+    );
 
     const lineItems = cartItems.map((item: CartItem) => {
       const storeItem = storeItems.find((i: StoreItem) => i.id === item.id);
@@ -89,7 +106,9 @@ app.post("/checkout-with-paypal", async (req: Request, res: Response) => {
         name: storeItem.name,
         unit_amount: {
           currency_code: "USD",
-          value: getDiscountedPrice(storeItem.price, storeItem.discount),
+          value: removeMoreThanTwoDecimals(
+            getDiscountedPrice(storeItem.price, storeItem.discount)
+          ),
         },
         quantity: item.quantity,
       };
@@ -103,35 +122,39 @@ app.post("/checkout-with-paypal", async (req: Request, res: Response) => {
         {
           amount: {
             currency_code: "USD",
-            value: totalAmount,
+            value: removeMoreThanTwoDecimals(
+              parseFloat(totalAmount)
+            ).toString(),
             breakdown: {
               item_total: {
                 currency_code: "USD",
-                value: totalAmount,
+                value: removeMoreThanTwoDecimals(
+                  parseFloat(totalAmount)
+                ).toString(),
               },
               discount: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for discount
+                value: "0.00",
               },
               handling: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for handling
+                value: "0.00",
               },
               insurance: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for insurance
+                value: "0.00",
               },
               shipping: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for shipping_discount
+                value: "0.00",
               },
               shipping_discount: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for shipping_discount
+                value: "0.00",
               },
               tax_total: {
                 currency_code: "USD",
-                value: "0.00", // Provide the value for shipping_discount
+                value: "0.00",
               },
             },
           },
@@ -139,7 +162,7 @@ app.post("/checkout-with-paypal", async (req: Request, res: Response) => {
         },
       ],
     });
-    
+
     const order = await paypalClient.execute(request);
     res.json({ id: order.result.id });
   } catch (e) {

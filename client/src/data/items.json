@@ -1,30 +1,212 @@
 [
-    {
-      "id": 1,
-      "name": "Book",
-      "price": 10.99,
-      "imgUrl": "/imgs/book.jpg",
-      "discount": 0
-    },
-    {
-      "id": 2,
-      "name": "Computer",
-      "price": 1199,
-      "imgUrl": "/imgs/computer.jpg",
-      "discount": 25
-    },
-    {
-      "id": 3,
-      "name": "Banana",
-      "price": 1.05,
-      "imgUrl": "/imgs/banana.jpg",
-      "discount": 0
-    },
-    {
-      "id": 4,
-      "name": "Car",
-      "price": 14000,
-      "imgUrl": "/imgs/car.jpg",
-      "discount": 15
-    }
+  {
+    "id": 1,
+    "name": "iPhone 9",
+    "price": 549,
+    "imgUrl": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    "discount": 12.96
+  },
+  {
+    "id": 2,
+    "name": "iPhone X",
+    "price": 899,
+    "imgUrl": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 3,
+    "name": "Samsung Universe 9",
+    "price": 1249,
+    "imgUrl": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 4,
+    "name": "OPPOF19",
+    "price": 280,
+    "imgUrl": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 5,
+    "name": "Huawei P30",
+    "price": 499,
+    "imgUrl": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 6,
+    "name": "MacBook Pro",
+    "price": 1749,
+    "imgUrl": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+    "discount": 0
+  },
+  {
+    "id": 7,
+    "name": "Samsung Galaxy Book",
+    "price": 1499,
+    "imgUrl": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 8,
+    "name": "Microsoft Surface Laptop 4",
+    "price": 1499,
+    "imgUrl": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+    "discount": 10.23
+  },
+  {
+    "id": 9,
+    "name": "Infinix INBOOK",
+    "price": 1099,
+    "imgUrl": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 10,
+    "name": "HP Pavilion 15-DK1056WM",
+    "price": 1099,
+    "imgUrl": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+    "discount": 6.18
+  },
+  {
+    "id": 11,
+    "name": "perfume Oil",
+    "price": 13,
+    "imgUrl": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 12,
+    "name": "Brown Perfume",
+    "price": 40,
+    "imgUrl": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 13,
+    "name": "Fog Scent Xpressio Perfume",
+    "price": 13,
+    "imgUrl": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
+    "discount": 8.14
+  },
+  {
+    "id": 14,
+    "name": "Non-Alcoholic Concentrated Perfume Oil",
+    "price": 120,
+    "imgUrl": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 15,
+    "name": "Eau De Perfume Spray",
+    "price": 30,
+    "imgUrl": "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
+    "discount": 10.99
+  },
+  {
+    "id": 16,
+    "name": "Hyaluronic Acid Serum",
+    "price": 19,
+    "imgUrl": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+    "discount": 13.31
+  },
+  {
+    "id": 17,
+    "name": "Tree Oil 30ml",
+    "price": 12,
+    "imgUrl": "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 18,
+    "name": "Oil Free Moisturizer 100ml",
+    "price": 40,
+    "imgUrl": "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 19,
+    "name": "Skin Beauty Serum.",
+    "price": 46,
+    "imgUrl": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
+    "discount": 10.68
+  },
+  {
+    "id": 20,
+    "name": "Freckle Treatment Cream- 15gm",
+    "price": 70,
+    "imgUrl": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 21,
+    "name": "- Daal Masoor 500 grams",
+    "price": 20,
+    "imgUrl": "https://i.dummyjson.com/data/products/21/thumbnail.png",
+    "discount": 0
+  },
+  {
+    "id": 22,
+    "name": "Elbow Macaroni - 400 gm",
+    "price": 14,
+    "imgUrl": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 23,
+    "name": "Orange Essence Food Flavou",
+    "price": 14,
+    "imgUrl": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 24,
+    "name": "cereals muesli fruit nuts",
+    "price": 46,
+    "imgUrl": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 25,
+    "name": "Gulab Powder 50 Gram",
+    "price": 70,
+    "imgUrl": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 26,
+    "name": "Plant Hanger For Home",
+    "price": 41,
+    "imgUrl": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
+    "discount": 17.86
+  },
+  {
+    "id": 27,
+    "name": "Flying Wooden Bird",
+    "price": 51,
+    "imgUrl": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
+    "discount": 15.58
+  },
+  {
+    "id": 28,
+    "name": "3D Embellishment Art Lamp",
+    "price": 20,
+    "imgUrl": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
+    "discount": 0
+  },
+  {
+    "id": 29,
+    "name": "Handcraft Chinese style",
+    "price": 60,
+    "imgUrl": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
+    "discount": 0
+  },
+  {
+    "id": 30,
+    "name": "Key Holder",
+    "price": 30,
+    "imgUrl": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
+    "discount": 0
+  }
 ]
